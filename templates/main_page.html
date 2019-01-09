@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <title>Form Input Template</title>
+    <title>I'm freaking awesome</title>
     <link rel="stylesheet" href="/static/css/custom.css">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <!--<script src="../static/js/bootstrap.min.js"></script>-->
@@ -12,46 +12,63 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Lemme knnow about yourself!</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
           <label for="input_name">First Name</label>
-          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Fred Flintstone">
-        </div>
+          <input type="name" class="form-control" name="input_name"  id="input_name" placeholder="Doug Dimmadome">
+          </div>
+    <div class="container">
+      <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_dropdown">Example select</label>
+          <label for="input_email">Email:</label>
+          <input type="email" class="free-form" name="input_email"  id="input_email" placeholder="abc123@gmail.com">
+          </div>
+        <div class="form-group">
+          <label for="movie_dropdown">What's your favorite movie?</label>
           <select class="form-control" name="input_dropdown" id="input_dropdown">
-            <option>1 fish</option>
-            <option>2 fish</option>
-            <option>red fish</option>
-            <option>the spanish inquisition</option>
-            <option>blue fish</option>
+            <option>Harry Potter</option>
+            <option>The Greatest Showman</option>
+            <option>Jurassic World</option>
+            <option>Aquaman</option>
+            <option>Creed</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
-          <select multiple class="form-control" name="input_select" id="input_select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="input_freeform">Example textarea</label>
+          <label for="input_freeform">If other, please write your favorite movie in the textbpx down below</label>
           <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
+        <div id="banner" class="container">
+    </div>
     <div class="container">
-      {% if input_data %} {{ input_data }} {% endif %}
+      <form action="{{ url_for('process_inputs') }}" method="post">
+        <div class="form-group">
+        </div>
+        <div class="form-group">
+          <label for="color_dropdown">What's your favorite color?</label>
+          <select class="form-control" name="input_color" id="input_color">
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Yellow</option>
+            <option>Orange</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="input2_freeform">If other, please write your favorite movie in the textbpx down below</label>
+          <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
+        </div>
+    <div class="container">
       <br />
       {% if output %} {{ output }} {% endif %}
     </div>
+<button type="submit" class="btn btn-primary">Submit</button>
   </body>
 </html>
 
